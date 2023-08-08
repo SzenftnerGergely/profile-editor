@@ -1,10 +1,10 @@
 {
-	"firstName": "name",
-	"surname": "name",
-	"country": "country",
-	"zipCode": "zip",
-	"city": "city",
-	"street": "street",
-	"houseNumber": "hn",
-	"picture": "/profile.jpg"
+  "firstName": "Gergely",
+  "surname": "Szenftner",
+  "country": "Magyarország",
+  "zipCode": "9072",
+  "city": "Nagyszentjános",
+  "street": "Fenyves utca",
+  "houseNumber": "9",
+  "picture": "/profile.jpg"
 }

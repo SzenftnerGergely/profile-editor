@@ -7,7 +7,7 @@
 		<title>Profile editor</title>
 
 		<link rel="stylesheet" href="public/style.css" />
-		<script src="public/script.js"></script>
+		<script src="public/script.js" defer></script>
 
 		<link
 			href="https://fonts.googleapis.com/css2?family=Montserrat&family=Source+Sans+Pro&display=swap"
@@ -15,6 +15,124 @@
 		/>
 	</head>
 	<body>
-		<div id="root"></div>
+		<div class="main-wrapper">
+
+			<div class="form-wrapper">
+		  
+			  <form action="" id="loginForm">
+				<div class="form-title">
+				  <h2 class="">Profile Page</h2>
+				  <img src="public/placeholder.png" alt="profile-pic" id="profile-pic">
+				</div>
+		  
+				<div class="input-flex">
+				  <div>
+					<label for="firstname" class="form-label">
+					  First name
+					</label>
+					<input
+					  type="text"
+					  name="firstname"
+					  id="firstname"
+					  class="form-input"
+					/>
+				  </div>
+				  <div>
+					<label for="lastname" class="form-label"> Last name </label>
+					<input
+					  type="text"
+					  name="lastname"
+					  id="lastname"
+					  class="form-input"
+					/>
+				  </div>
+				</div>
+		  
+				<div class="mb-3">
+				  <label for="address" class="form-label">
+					Street Address
+				  </label>
+				  <input
+					type="text"
+					name="address"
+					id="address"
+					class="form-input"
+				  />
+				</div>
+		  
+				<div class="input-flex">
+				  <div>
+					<label for="city" class="form-label"> City </label>
+					<input
+					  type="text"
+					  name="city"
+					  id="city"
+					  class="form-input"
+					/>
+				  </div>
+				  <div>
+					<label for="country" class="form-label"> Country </label>
+					<input
+					  type="text"
+					  name="country"
+					  id="country"
+					  class="form-input"
+					/>
+				  </div>
+				</div>
+		  
+				<div class="input-flex">
+				  <div>
+					<label for="post" class="form-label"> Post/Zip code </label>
+					<input
+					  type="text"
+					  name="post"
+					  id="post"
+					  class="form-input"
+					/>
+				  </div>
+				  <div>
+					<label for="number" class="form-label"> House Number </label>
+					<input
+					  type="text"
+					  name="number"
+					  id="number"
+					  class="form-input"
+					/>
+				  </div>
+				</div>
+
+				<div class="mb-3">
+					<label for="introduction" class="form-label">
+						Introduction
+					</label>
+					<textarea 
+					  type="textarea"
+					  name="introduction"
+					  id="introduction"
+					  class="form-input"
+					  ></textarea>
+				  </div>
+				  
+				  <div class="btn-group">
+
+					  <div>
+						<label for="profile-pic-input" class="btn profile-pic-btn">Upload Image</label>
+						<input
+						  type="file"
+						  id="profile-pic-input"
+						  name="profile-pic-input"
+						  accept=".jpg, .jpeg, .png" />
+					  </div>
+	
+					<div>
+						<button class="btn" id="delete-btn">Delete</button>
+						<button class="btn" type="submit">Save</button>
+					</div>
+
+				  </div>
+			  </form>
+			</div>
+		  </div>
 	</body>
 </html>
