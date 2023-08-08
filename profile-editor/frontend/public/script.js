@@ -5,9 +5,9 @@ inputFile.onchange = function () {
   profilePic.src = URL.createObjectURL(inputFile.files[0]);
 };
 
-let loginForm = document.getElementById("loginForm");
+let profilePageForm = document.getElementById("profilePageForm");
 
-loginForm.addEventListener("submit", (e) => {
+profilePageForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let firstName = document.getElementById("firstname").value
@@ -51,13 +51,13 @@ loginForm.addEventListener("submit", (e) => {
 document.getElementById("delete-btn").addEventListener("click", (e) => {
   e.preventDefault();
 
-  let firstName = document.getElementById("firstname").value = ""
-  let surname = document.getElementById("lastname").value = ""
-  let country = document.getElementById("country").value = ""
-  let zipCode = document.getElementById("post").value = ""
-  let city = document.getElementById("city").value = ""
-  let street = document.getElementById("address").value = ""
-  let houseNumber = document.getElementById("number").value = ""
-  let introduction = document.getElementById("introduction").value = ""
+  document.getElementById("firstname").value = ""
+  document.getElementById("lastname").value = ""
+  document.getElementById("country").value = ""
+  document.getElementById("post").value = ""
+  document.getElementById("city").value = ""
+  document.getElementById("address").value = ""
+  document.getElementById("number").value = ""
+  document.getElementById("introduction").value = ""
   profilePic.src = "./public/placeholder.png"
 })
