@@ -17,6 +17,7 @@ loginForm.addEventListener("submit", (e) => {
   let city = document.getElementById("city").value
   let street = document.getElementById("address").value
   let houseNumber = document.getElementById("number").value
+  let introduction = document.getElementById("introduction").value
   let inputFile = document.getElementById("profile-pic-input");
 
   async function upload(formData) {
@@ -41,6 +42,7 @@ loginForm.addEventListener("submit", (e) => {
   formData.append("city", city);
   formData.append("street", street);
   formData.append("houseNumber", houseNumber);
+  formData.append("introduction", introduction);
   formData.append("picture", inputFile.files[0]);
   
   upload(formData);
@@ -56,5 +58,6 @@ document.getElementById("delete-btn").addEventListener("click", (e) => {
   let city = document.getElementById("city").value = ""
   let street = document.getElementById("address").value = ""
   let houseNumber = document.getElementById("number").value = ""
+  let introduction = document.getElementById("introduction").value = ""
   profilePic.src = "./public/placeholder.png"
 })
