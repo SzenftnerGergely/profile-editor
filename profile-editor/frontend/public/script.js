@@ -1,3 +1,4 @@
+//Picture preview
 let profilePic = document.getElementById("profile-pic");
 let inputFile = document.getElementById("profile-pic-input");
 
@@ -5,6 +6,7 @@ inputFile.onchange = function () {
   profilePic.src = URL.createObjectURL(inputFile.files[0]);
 };
 
+//Collect data from Form
 let profilePageForm = document.getElementById("profilePageForm");
 
 profilePageForm.addEventListener("submit", (e) => {
@@ -20,6 +22,7 @@ profilePageForm.addEventListener("submit", (e) => {
   let introduction = document.getElementById("introduction").value
   let inputFile = document.getElementById("profile-pic-input");
 
+  //Send form data to Server
   async function upload(formData) {
     try {
       const response = await fetch("http://localhost:9000/", {
@@ -48,6 +51,7 @@ profilePageForm.addEventListener("submit", (e) => {
   upload(formData);
 });
 
+//Even for Delete-Btn
 document.getElementById("delete-btn").addEventListener("click", (e) => {
   e.preventDefault();
 
