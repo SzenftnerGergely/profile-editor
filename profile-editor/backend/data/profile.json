@@ -1,11 +1,11 @@
 {
-  "firstName": "Gergely",
-  "surname": "Szenftner",
-  "country": "Magyarország",
-  "zipCode": "9072",
-  "city": "Nagyszentjános",
-  "street": "Fenyves utca 9",
-  "houseNumber": "9",
-  "introduction": "Ez egy szöveg.",
+  "firstName": "",
+  "surname": "",
+  "country": "",
+  "zipCode": "",
+  "city": "",
+  "street": "",
+  "houseNumber": "",
+  "introduction": "",
   "picture": "/profile.jpg"
 }

@@ -64,4 +64,30 @@ document.getElementById("delete-btn").addEventListener("click", (e) => {
   document.getElementById("number").value = ""
   document.getElementById("introduction").value = ""
   profilePic.src = "./public/placeholder.png"
+
+  async function upload(formData) {
+    try {
+      const response = await fetch("http://localhost:9000/", {
+        method: "POST",
+        body: formData,
+      });
+      const result = await response.json();
+      console.log("Success:", result);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+  
+  const formData = new FormData();
+  
+  formData.append("firstName", "");
+  formData.append("surname", "");
+  formData.append("country", "");
+  formData.append("zipCode", "");
+  formData.append("city", "");
+  formData.append("street", "");
+  formData.append("houseNumber", "");
+  formData.append("introduction", "");
+  
+  upload(formData);
 })
