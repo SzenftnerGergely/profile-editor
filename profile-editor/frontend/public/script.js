@@ -23,7 +23,7 @@ profilePageForm.addEventListener("submit", (e) => {
   let inputFile = document.getElementById("profile-pic-input");
 
   //POST request using fetch with async/await 
-  async function upload(formData) {
+  async function uploadFormData(formData) {
     try {
       const response = await fetch("http://localhost:9000/", {
         method: "POST",
@@ -48,7 +48,7 @@ profilePageForm.addEventListener("submit", (e) => {
   formData.append("introduction", introduction);
   formData.append("picture", inputFile.files[0]);
   
-  upload(formData);
+  uploadFormData(formData);
 });
 
 //Even for Delete-Btn
