@@ -8,7 +8,7 @@ inputFile.onchange = function () {
 
 let profilePageForm = document.getElementById("profilePageForm");
 
-//Even for Submit-Btn
+//Event for Submit-Btn
 profilePageForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -52,7 +52,7 @@ profilePageForm.addEventListener("submit", (e) => {
   uploadFormData(formData);
 });
 
-//Even for Delete-Btn
+//Event for Delete-Btn
 document.getElementById("delete-btn").addEventListener("click", (e) => {
   e.preventDefault();
 
