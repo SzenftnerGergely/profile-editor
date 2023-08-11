@@ -22,7 +22,7 @@ profilePageForm.addEventListener("submit", (e) => {
   let introduction = document.getElementById("introduction").value
   let inputFile = document.getElementById("profile-pic-input");
 
-  //Send form data to Server
+  //POST request using fetch with async/await 
   async function upload(formData) {
     try {
       const response = await fetch("http://localhost:9000/", {
@@ -56,11 +56,17 @@ document.getElementById("delete-btn").addEventListener("click", (e) => {
   e.preventDefault();
 
 // DELETE request using fetch with async/await 
-  (async () => {
-    await fetch("http://localhost:9000/", { method: 'DELETE' });
-  })();
+  async function deleteFormData() {
+    try {
+      await fetch("http://localhost:9000/", { 
+        method: 'DELETE' 
+      });
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
-
+  //Clear input fields
   document.getElementById("firstname").value = ""
   document.getElementById("lastname").value = ""
   document.getElementById("country").value = ""
@@ -69,5 +75,6 @@ document.getElementById("delete-btn").addEventListener("click", (e) => {
   document.getElementById("address").value = ""
   document.getElementById("number").value = ""
   document.getElementById("introduction").value = ""
-  
+
+  deleteFormData()
 })
