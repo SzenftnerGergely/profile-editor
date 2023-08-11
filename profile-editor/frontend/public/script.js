@@ -55,6 +55,12 @@ profilePageForm.addEventListener("submit", (e) => {
 document.getElementById("delete-btn").addEventListener("click", (e) => {
   e.preventDefault();
 
+// DELETE request using fetch with async/await 
+  (async () => {
+    await fetch("http://localhost:9000/", { method: 'DELETE' });
+  })();
+
+
   document.getElementById("firstname").value = ""
   document.getElementById("lastname").value = ""
   document.getElementById("country").value = ""
