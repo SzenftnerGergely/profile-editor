@@ -6,12 +6,13 @@ inputFile.onchange = function () {
   profilePic.src = URL.createObjectURL(inputFile.files[0]);
 };
 
-//Collect data from Form
 let profilePageForm = document.getElementById("profilePageForm");
 
+//Even for Submit-Btn
 profilePageForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
+  //Collect data from Form
   let firstName = document.getElementById("firstname").value
   let surname = document.getElementById("lastname").value
   let country = document.getElementById("country").value
@@ -75,6 +76,7 @@ document.getElementById("delete-btn").addEventListener("click", (e) => {
   document.getElementById("address").value = ""
   document.getElementById("number").value = ""
   document.getElementById("introduction").value = ""
+  profilePic.src = "./public/placeholder.png"
 
   deleteFormData()
 })
